@@ -31,14 +31,14 @@
 	['x',' ',' ',' ',' ','x',' ','x',' ',' ',' ',' ','x',' ',' ',' ',' ','x',' ','x',' ',' ',' ',' ','x',' ',' ',' ',' ','x',' ','x',' ',' ',' ',' ','x',' ',' ',' ',' ','x',' ','x',' ',' ',' ',' ',' ','x',' ','x',' ',' ','x',' ',' ','x'],
 	[' ','x',' ',' ',' ','x',' ','x',' ',' ','x',' ',' ','x',' ',' ',' ','x',' ','x',' ',' ','x',' ',' ','x',' ',' ',' ','x',' ','x',' ',' ','x',' ',' ','x',' ',' ',' ','x',' ','x',' ',' ','x',' ',' ','x',' ','x',' ',' ','x',' ',' ','x']];
 	var b = [];
-	function flak()
+	function startGameOfLife()
 	{
 		for(var i=0; i< 700; i++)
 		{
-			setTimeout(function(x) { return function() { func() }; }(i), 400*i);
+			setTimeout(function(x) { return function() { gameOfLife() }; }(i), 400*i);
 		}
 	}
-	function func()
+	function gameOfLife()
 	{
 		var row= 27;
 		var col= 58;
@@ -114,6 +114,6 @@
 		count= count+1;	
 	}
 </script>
-<body id="htbody" onload="flak();"/>
+<body id="htbody" onload="startGameOfLife();"/>
 </html>
 
